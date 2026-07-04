@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Do You Love Me? ❤️</title>
+<style>
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:linear-gradient(#ffd6e7,#ffeef5);
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+text-align:center;
+}
+.box{
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 0 20px pink;
+max-width:350px;
+}
+button{
+padding:10px 20px;
+margin:10px;
+font-size:18px;
+border:none;
+border-radius:10px;
+cursor:pointer;
+}
+#yes{background:#ff4d88;color:white;}
+#no{background:#ddd;}
+#msg{display:none;margin-top:20px;color:#ff1493;}
+</style>
+</head>
+<body>
+
+<div class="box">
+<h2>🧸 From Shivuuuuu 🫀</h2>
+<h3>To Meri Pyaari Bachiii 🫶🏻💋🥹</h3>
+
+<h2>Do You Love Me? ❤️</h2>
+
+<button id="yes">Yes 💖</button>
+<button id="no">No 😒</button>
+
+<div id="msg">
+<h3>Yayyyyy!! 🥹❤️</h3>
+<p>
+Bubuuuuuuuu mekoooo ptaaa haiii 🎀
+Aap mere liye itni mehnat karti ho...
+THANKUUU SOOO MUCHHHHH MERI DARLING 🫠🫶🏻
+Humesha mujhe wrong prove karna... ❤️
+</p>
+</div>
+
+</div>
+
+<script>
+let count=0;
+
+document.getElementById("no").onclick=function(){
+count++;
+if(count>=2){
+this.style.display="none";
+}
+};
+
+document.getElementById("yes").onclick=function(){
+document.getElementById("msg").style.display="block";
+
+let text=document.getElementById("msg").innerText;
+speechSynthesis.speak(new SpeechSynthesisUtterance(text));
+};
+</script>
+
+</body>
+</html>
